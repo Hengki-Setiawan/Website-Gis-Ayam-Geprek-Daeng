@@ -11,6 +11,7 @@ import TimSection from './components/TimSection'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import { ChapterDivider } from './components/ChapterDivider'
+import AIAssistant from './components/AIAssistant'
 
 export default function App() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
 
       <Footer />
       <BackToTop />
+      <AIAssistant />
     </>
   )
 }
