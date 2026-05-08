@@ -6,6 +6,7 @@ import BisnisSection from './components/BisnisSection'
 import MengapaGISSection from './components/MengapaGISSection'
 import AnalisisPetaSection from './components/AnalisisPetaSection'
 import KesimpulanSection from './components/KesimpulanSection'
+import LandasanTeoriSection from './components/LandasanTeoriSection'
 import TimSection from './components/TimSection'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
@@ -33,10 +34,12 @@ export default function App() {
         <ChapterDivider label="BAB 2" />
         <MengapaGISSection />
         <ChapterDivider label="BAB 3" />
-        <AnalisisPetaSection />
+        <LandasanTeoriSection />
         <ChapterDivider label="BAB 4" />
-        <KesimpulanSection />
+        <AnalisisPetaSection />
         <ChapterDivider label="BAB 5" />
+        <KesimpulanSection />
+        <ChapterDivider label="BAB 6" />
         <TimSection />
       </main>
 

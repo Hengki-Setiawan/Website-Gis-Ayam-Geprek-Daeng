@@ -5,10 +5,12 @@ const container = { hidden: {}, show: { transition: { staggerChildren: 0.15 } } 
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-16 px-6 overflow-hidden bg-gray-950">
-      {/* Decorative gradient blobs */}
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-red-700/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-orange-600/10 rounded-full blur-[100px] pointer-events-none" />
+    <section className="relative min-h-screen flex items-center pt-20 pb-16 px-6 overflow-hidden bg-slate-50">
+      {/* Dynamic Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-red-100/50 blur-[100px] mix-blend-multiply opacity-50" />
+        <div className="absolute -bottom-[20%] -left-[10%] w-[60%] h-[60%] rounded-full bg-orange-100/50 blur-[100px] mix-blend-multiply opacity-50" />
+      </div>
 
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center relative z-10">
 
@@ -28,35 +30,34 @@ export default function HeroSection() {
 
         {/* Teks */}
         <motion.div variants={container} initial="hidden" animate="show" className="space-y-5">
-          <motion.span variants={item} className="inline-block text-xs font-semibold tracking-widest text-red-500 uppercase border border-red-600/40 px-4 py-1.5 rounded-full bg-red-600/10">
+          <motion.span variants={item} className="inline-block text-xs font-semibold tracking-widest text-red-600 uppercase border border-red-600/40 px-4 py-1.5 rounded-full bg-red-600/10">
             Tugas Mata Kuliah · GIS for Business
           </motion.span>
 
-          <motion.h1 variants={item} className="hero-title text-white">
-            Menentukan Lokasi Cabang Baru{' '}
-            <span className="text-gradient">Ayam Geprek Daeng</span>{' '}
-            dengan Pendekatan GIS
+          <motion.h1 variants={item} className="hero-title text-slate-900">
+            Ayam Geprek Daeng<br />
+            <span className="text-gradient">Ekspansi Cerdas</span>
           </motion.h1>
-
-          <motion.p variants={item} className="text-gray-400 text-base md:text-lg leading-relaxed">
-            Penentuan lokasi bisnis yang tepat sangat penting bagi keberhasilan usaha. Melalui pendekatan GIS, kami menganalisis empat lapisan data spasial Kota Makassar untuk menghasilkan rekomendasi lokasi cabang baru yang lebih objektif dan strategis.
+          
+          <motion.p variants={item} className="text-slate-600 text-base md:text-lg leading-relaxed">
+            Menemukan lokasi cabang baru tidak lagi sekadar tebakan. Laporan analitik ini memadukan kelezatan kuliner lokal dengan keakuratan <strong>Sistem Informasi Geografis (GIS)</strong> untuk mengidentifikasi "sweet spot" pertumbuhan bisnis di Kota Makassar.
           </motion.p>
-
-          <motion.div variants={item} className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-sm text-gray-500">Analisis Aktif · 14 Kecamatan · 4 Layer Data</span>
+          
+          <motion.div variants={item} className="flex flex-col sm:flex-row items-center gap-4 mt-2">
+            <a href="#analisis" 
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold px-7 py-3 rounded-full transition-all hover:-translate-y-0.5 shadow-lg shadow-red-900/20 text-sm md:text-base"
+            >
+              Lihat Analisis Peta
+              <span className="bounce-arrow">↓</span>
+            </a>
+            <a href="#bisnis" className="flex items-center gap-2 text-slate-500 hover:text-slate-800 transition-colors text-sm">
+              Pelajari Bisnisnya
+            </a>
           </motion.div>
 
-          <motion.div variants={item} className="flex items-center gap-4 flex-wrap">
-            <a href="#bisnis"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold px-7 py-3 rounded-full transition-all hover:-translate-y-0.5 shadow-lg shadow-red-900/40 text-sm md:text-base"
-            >
-              Mulai Membaca
-            </a>
-            <a href="#bisnis" className="flex items-center gap-2 text-gray-500 hover:text-gray-300 transition-colors text-sm">
-              <span className="bounce-arrow text-xl">↓</span>
-              <span>Scroll untuk lanjut</span>
-            </a>
+          <motion.div variants={item} className="mt-8 flex items-center gap-3 bg-white/50 backdrop-blur-sm border border-slate-200 px-4 py-2 rounded-full w-fit">
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
+            <span className="text-sm text-slate-600">Analisis Aktif · 14 Kecamatan · 4 Layer Data</span>
           </motion.div>
         </motion.div>
 

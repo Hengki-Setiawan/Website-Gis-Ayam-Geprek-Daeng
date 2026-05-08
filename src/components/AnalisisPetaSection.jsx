@@ -54,12 +54,12 @@ export default function AnalisisPetaSection() {
   const tab = TABS.find(t => t.id === active)
 
   return (
-    <section id="analisis-peta" className="py-20 px-4 md:px-6 bg-gray-950">
+    <section id="analisis-peta" className="py-20 px-4 md:px-6 bg-slate-50">
       <div className="max-w-7xl mx-auto">
         <div className="mb-10 md:mb-12">
-          <span className="section-label">BAB 3 · ANALISIS SPASIAL</span>
-          <h2 className="section-title text-white mt-2 mb-3">Empat Lapisan Data untuk Membaca Kota</h2>
-          <p className="text-gray-400 max-w-2xl text-base md:text-lg">
+          <span className="section-label">BAB 4 · ANALISIS SPASIAL</span>
+          <h2 className="section-title text-slate-900 mt-2 mb-3">Empat Lapisan Data untuk Membaca Kota</h2>
+          <p className="text-slate-600 max-w-2xl text-base md:text-lg">
             Setiap peta merepresentasikan satu dimensi spasial Kota Makassar yang berpengaruh terhadap keberhasilan outlet kuliner. Pilih tab untuk membaca analisis lengkapnya.
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function AnalisisPetaSection() {
           {/* Tab list — horizontal scroll on mobile, vertical on desktop */}
           <div className="relative">
             {/* Scroll hint fade on mobile */}
-            <div className="lg:hidden absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-gray-950 to-transparent z-10 pointer-events-none" />
+            <div className="lg:hidden absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
             <div className="flex lg:flex-col gap-2 overflow-x-auto pb-3 lg:pb-0 pr-4 lg:pr-0" style={{ scrollbarWidth: 'none' }}>
               {TABS.map(t => (
                 <button
@@ -77,14 +77,14 @@ export default function AnalisisPetaSection() {
                   onClick={() => setActive(t.id)}
                   className={`flex-shrink-0 flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all ${
                     active === t.id
-                      ? 'bg-gradient-to-br from-gray-800 to-gray-900 border border-red-500/50 shadow-lg shadow-red-900/20'
-                      : 'bg-gray-900/50 border border-white/5 text-gray-400 hover:bg-gray-800/80'
+                      ? 'bg-white border border-red-200 shadow-md shadow-red-100'
+                      : 'bg-white/50 border border-slate-200 text-slate-500 hover:bg-white'
                   }`}
                 >
                   <span className="text-xl flex-shrink-0">{t.icon}</span>
                   <div className="min-w-0">
-                    <div className={`text-xs font-bold mb-0.5 ${active === t.id ? 'text-red-400' : 'text-gray-500'}`}>{t.badge}</div>
-                    <div className={`text-sm font-semibold whitespace-nowrap ${active === t.id ? 'text-white' : ''}`}>{t.label}</div>
+                    <div className={`text-xs font-bold mb-0.5 ${active === t.id ? 'text-red-500' : 'text-slate-400'}`}>{t.badge}</div>
+                    <div className={`text-sm font-semibold whitespace-nowrap ${active === t.id ? 'text-slate-900' : ''}`}>{t.label}</div>
                   </div>
                 </button>
               ))}
@@ -101,7 +101,7 @@ export default function AnalisisPetaSection() {
               className="flex flex-col md:grid md:grid-cols-2 gap-6"
             >
               {/* Gambar peta */}
-              <div className="relative group cursor-pointer rounded-2xl overflow-hidden border border-white/10"
+              <div className="relative group cursor-pointer rounded-2xl overflow-hidden border border-slate-200"
                 onClick={() => setLightbox(tab.image)}
               >
                 <img
@@ -111,44 +111,44 @@ export default function AnalisisPetaSection() {
                   loading="lazy"
                 />
                 {/* Tap/hover hint */}
-                <div className="absolute bottom-3 right-3 bg-black/70 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-slate-900 text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
                   <span>🔍</span> Tap untuk perbesar
                 </div>
               </div>
 
               {/* Deskripsi */}
-              <div className="card-dark p-6 md:p-8 flex flex-col gap-5">
+              <div className="card-dark p-6 md:p-8 flex flex-col gap-5 bg-white border border-slate-200">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl">{tab.icon}</span>
-                    <h3 className="text-xl md:text-2xl font-bold text-white">{tab.label}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900">{tab.label}</h3>
                   </div>
-                  <p className="text-xs text-red-400 font-bold uppercase tracking-widest">{tab.badge}</p>
+                  <p className="text-xs text-red-500 font-bold uppercase tracking-widest">{tab.badge}</p>
                 </div>
 
                 {/* Alasan variabel dipilih */}
-                <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                  <p className="text-xs text-gray-400 font-semibold uppercase tracking-widest mb-2">Mengapa variabel ini?</p>
-                  <p className="text-gray-200 text-sm leading-relaxed">{tab.alasan}</p>
+                <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <p className="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-2">Mengapa variabel ini?</p>
+                  <p className="text-slate-700 text-sm leading-relaxed">{tab.alasan}</p>
                 </div>
 
                 {/* Poin analisis */}
                 <ul className="space-y-2.5 flex-grow">
                   {tab.points.map((p, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-gray-300 leading-relaxed">
-                      <span className="w-5 h-5 rounded-full bg-red-600/20 border border-red-500/40 flex items-center justify-center text-red-400 text-xs font-bold flex-shrink-0 mt-0.5">{i + 1}</span>
+                    <li key={i} className="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
+                      <span className="w-5 h-5 rounded-full bg-red-100 border border-red-200 flex items-center justify-center text-red-600 text-xs font-bold flex-shrink-0 mt-0.5">{i + 1}</span>
                       {p}
                     </li>
                   ))}
                 </ul>
 
                 {/* Insight box */}
-                <div className="bg-gradient-to-br from-amber-950/40 to-orange-950/20 border border-amber-600/30 rounded-xl p-4">
+                <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
                   <div className="flex items-start gap-3">
                     <span className="text-lg">💡</span>
                     <div>
-                      <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-1">Insight Data</p>
-                      <p className="text-amber-100 text-sm leading-relaxed">{tab.insight}</p>
+                      <p className="text-amber-600 font-bold text-xs uppercase tracking-widest mb-1">Insight Data</p>
+                      <p className="text-amber-900 text-sm leading-relaxed">{tab.insight}</p>
                     </div>
                   </div>
                 </div>

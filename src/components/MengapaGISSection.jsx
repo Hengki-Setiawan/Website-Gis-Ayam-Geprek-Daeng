@@ -12,13 +12,13 @@ function NumericCounterCard({ label, subtitle, targetVal }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="card-dark p-5 md:p-6 text-center border border-white/5"
+      className="card-dark p-5 md:p-6 text-center border border-slate-200 bg-white"
     >
-      <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 mb-2">
+      <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-500 mb-2">
         {val}
       </div>
-      <div className="text-sm md:text-base font-bold text-gray-200">{label}</div>
-      <div className="text-xs text-gray-500 mt-1">{subtitle}</div>
+      <div className="text-sm md:text-base font-bold text-slate-800">{label}</div>
+      <div className="text-xs text-slate-500 mt-1">{subtitle}</div>
     </motion.div>
   )
 }
@@ -30,26 +30,26 @@ function StaticCounterCard({ label, subtitle, value, delay = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
-      className="card-dark p-5 md:p-6 text-center border border-white/5"
+      className="card-dark p-5 md:p-6 text-center border border-slate-200 bg-white"
     >
-      <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-red-400 to-orange-400 mb-2">
+      <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-red-500 to-orange-500 mb-2">
         {value}
       </div>
-      <div className="text-sm md:text-base font-bold text-gray-200">{label}</div>
-      <div className="text-xs text-gray-500 mt-1">{subtitle}</div>
+      <div className="text-sm md:text-base font-bold text-slate-800">{label}</div>
+      <div className="text-xs text-slate-500 mt-1">{subtitle}</div>
     </motion.div>
   )
 }
 
 export default function MengapaGISSection() {
   return (
-    <section id="mengapa-gis" className="py-20 px-4 md:px-6 bg-gray-900 border-t border-b border-white/5">
+    <section id="mengapa-gis" className="py-20 px-4 md:px-6 bg-slate-50 border-t border-b border-slate-200">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
             <span className="section-label">BAB 2 · PROBLEM &amp; SOLUSI</span>
-            <h2 className="section-title text-white mt-2 mb-5">Mengapa Lokasi Menentukan Keberhasilan Bisnis?</h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed text-base md:text-lg">
+            <h2 className="section-title text-slate-900 mt-2 mb-5">Mengapa Lokasi Menentukan Keberhasilan Bisnis?</h2>
+            <div className="space-y-4 text-slate-600 leading-relaxed text-base md:text-lg">
               <p>
                 Banyak usaha kuliner yang tutup bukan karena produknya buruk, melainkan karena <strong>salah memilih lokasi</strong>. Lokasi yang terlihat ramai belum tentu menguntungkan apabila kompetitor di sana sudah sangat padat atau segmen pasarnya tidak sesuai.
               </p>
@@ -62,8 +62,8 @@ export default function MengapaGISSection() {
             </div>
 
             {/* Metodologi flow — mobile-friendly */}
-            <div className="mt-8 p-5 glass rounded-2xl">
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Alur Metodologi</p>
+            <div className="mt-8 p-5 bg-white border border-slate-200 rounded-2xl shadow-sm">
+              <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Alur Metodologi</p>
               <div className="flex flex-col gap-3">
                 {[
                   { icon: '📍', step: '1', label: 'Pengumpulan Data Spasial', sub: 'OpenStreetMap, data BPS Makassar' },
@@ -71,12 +71,12 @@ export default function MengapaGISSection() {
                   { icon: '✅', step: '3', label: 'Identifikasi Titik Optimal', sub: 'Skor tertinggi dari irisan 4 kriteria' },
                 ].map((s) => (
                   <div key={s.step} className="flex items-center gap-4">
-                    <div className="w-9 h-9 rounded-full bg-red-600/20 border border-red-500/40 flex items-center justify-center text-red-400 font-black text-sm flex-shrink-0">
+                    <div className="w-9 h-9 rounded-full bg-red-100 border border-red-200 flex items-center justify-center text-red-600 font-black text-sm flex-shrink-0">
                       {s.step}
                     </div>
                     <div>
-                      <p className="text-white font-semibold text-sm">{s.label}</p>
-                      <p className="text-gray-500 text-xs">{s.sub}</p>
+                      <p className="text-slate-900 font-semibold text-sm">{s.label}</p>
+                      <p className="text-slate-500 text-xs">{s.sub}</p>
                     </div>
                   </div>
                 ))}

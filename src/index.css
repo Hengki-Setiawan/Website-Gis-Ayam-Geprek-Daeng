@@ -4,17 +4,17 @@
 
 /* CSS Variables — BP1 Design System */
 :root {
-  --chili:        #C0392B;
-  --chili-light:  #E74C3C;
-  --chili-dark:   #96281B;
-  --orange:       #F97316;
-  --bg-dark:      #0A0F1E;
-  --bg-card:      #111827;
-  --bg-surface:   #1F2937;
-  --text-primary: #F9FAFB;
-  --text-secondary:#9CA3AF;
-  --text-muted:   #6B7280;
-  --border:       rgba(255,255,255,0.07);
+  --chili:        #D32F2F;
+  --chili-light:  #F44336;
+  --chili-dark:   #B71C1C;
+  --orange:       #E65100;
+  --bg-dark:      #F8FAFC;
+  --bg-card:      #FFFFFF;
+  --bg-surface:   #F1F5F9;
+  --text-primary: #0F172A;
+  --text-secondary:#334155;
+  --text-muted:   #64748B;
+  --border:       rgba(0,0,0,0.08);
 }
 
 * { scroll-behavior: smooth; box-sizing: border-box; }
@@ -54,15 +54,15 @@ h2.section-title {
   content: '';
   flex: 1;
   height: 1px;
-  background: rgba(255,255,255,0.07);
+  background: rgba(0,0,0,0.08);
 }
 
 @layer components {
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+    @apply bg-white/80 backdrop-blur-xl border border-black/5;
   }
   .card-dark {
-    @apply rounded-2xl border shadow-xl shadow-black/50;
+    @apply rounded-2xl border shadow-xl shadow-black/5;
     background-color: var(--bg-card);
     border-color: var(--border);
   }
