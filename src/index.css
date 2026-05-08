@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables — BP1 Design System */
+:root {
+  --chili:        #C0392B;
+  --chili-light:  #E74C3C;
+  --chili-dark:   #96281B;
+  --orange:       #F97316;
+  --bg-dark:      #0A0F1E;
+  --bg-card:      #111827;
+  --bg-surface:   #1F2937;
+  --text-primary: #F9FAFB;
+  --text-secondary:#9CA3AF;
+  --text-muted:   #6B7280;
+  --border:       rgba(255,255,255,0.07);
+}
+
+* { scroll-behavior: smooth; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+/* Responsive fluid typography — BP1 */
+h1.hero-title {
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+h2.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+/* Chapter divider — BP1 */
+.chapter-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  color: #374151;
+}
+.chapter-divider::before,
+.chapter-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.07);
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  .card-dark {
+    @apply rounded-2xl border shadow-xl shadow-black/50;
+    background-color: var(--bg-card);
+    border-color: var(--border);
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent;
+  }
+  .section-label {
+    @apply text-xs font-semibold tracking-widest uppercase;
+    color: var(--chili-light);
+  }
+  /* Scroll cue bounce animation */
+  .bounce-arrow {
+    animation: bounceY 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes bounceY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
