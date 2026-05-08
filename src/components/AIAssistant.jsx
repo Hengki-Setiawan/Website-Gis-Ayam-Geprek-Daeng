@@ -51,10 +51,11 @@ export default function AIAssistant() {
     }
   }, [messages, isOpen])
 
-  const handleSend = async () => {
-    if (!input.trim()) return
+  const handleSend = async (textOverride = null) => {
+    const messageText = textOverride || input
+    if (!messageText.trim()) return
 
-    const userMsg = { role: 'user', content: input }
+    const userMsg = { role: 'user', content: messageText }
     setMessages(prev => [...prev, userMsg])
     setInput('')
     setIsLoading(true)
@@ -179,10 +180,31 @@ export default function AIAssistant() {
               <div ref={messagesEndRef} />
             </div>
 
+            {/* Quick Replies */}
+            {messages.length === 1 && !isLoading && (
+              <div className="px-4 pb-2 bg-white flex flex-wrap gap-2">
+                {[
+                  "Lokasi terbaik? 📍",
+                  "Apa itu GIS? 🗺️",
+                  "Peta kepadatan 👥",
+                  "Anggota tim 🎓"
+                ].map((reply, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleSend(reply)}
+                    disabled={isLoading}
+                    className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-medium rounded-full transition-colors disabled:opacity-50"
+                  >
+                    {reply}
+                  </button>
+                ))}
+              </div>
+            )}
+
             {/* Input Area */}
             <div className="p-4 bg-white border-t border-slate-200">
               <form 
-                onSubmit={(e) => { e.preventDefault(); handleSend(); }}
+                onSubmit={(e) => { e.preventDefault(); handleSend(null); }}
                 className="flex items-center gap-2"
               >
                 <input
