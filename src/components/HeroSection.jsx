@@ -34,13 +34,13 @@ export default function HeroSection() {
             Tugas Mata Kuliah · GIS for Business
           </motion.span>
 
-          <motion.h1 variants={item} className="hero-title text-slate-900">
-            Analisis Lokasi Cabang<br />
-            <span className="text-gradient">Ayam Geprek Daeng</span>
+          <motion.h1 variants={item} className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.15]">
+            Pemanfaatan Sistem Informasi Geografis (GIS) dalam Strategi Ekspansi<br />
+            <span className="text-gradient">UMKM Ayam Geprek Daeng</span>
           </motion.h1>
           
-          <motion.p variants={item} className="text-slate-600 text-base md:text-lg leading-relaxed">
-            Laporan ini menyajikan hasil analisis spasial menggunakan <strong>Sistem Informasi Geografis (GIS)</strong> untuk menentukan lokasi cabang baru yang potensial bagi usaha Ayam Geprek Daeng di Kota Makassar.
+          <motion.p variants={item} className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
+            Analisis Spasial Berbasis Jangkauan Pasar, Aksesibilitas, dan Distribusi Kompetitor di Kota Makassar.
           </motion.p>
           
           <motion.div variants={item} className="flex flex-col sm:flex-row items-center gap-4 mt-2">
