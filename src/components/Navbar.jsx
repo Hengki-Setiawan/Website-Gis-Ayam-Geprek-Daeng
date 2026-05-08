@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const links = [
   { label: 'Bisnis', href: '#bisnis' },
@@ -9,10 +9,17 @@ const links = [
   { label: 'Tim', href: '#tim' },
 ]
 
+const lkLinks = [
+  { label: 'Lembar Kerja 1', href: 'https://docs.google.com/document/d/19mR4mEdL8VDjSLLf5y7tQAXw2SpAyEzBi78GSZEVAR8/edit?tab=t.0' },
+  { label: 'Lembar Kerja 2', href: 'https://docs.google.com/document/d/1to2AthcZEALk8dp1AP1U7UUeFoe2sEJlJA7weI5zQK4/edit?tab=t.0' },
+  { label: 'Lembar Kerja 3', href: 'https://docs.google.com/document/d/1DR2S4I8Qhxeiz7uCA9Mfg7LoKFoYqdWasS6829-bqtk/edit?usp=sharing' },
+]
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
+  const [lkOpen, setLkOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -20,7 +27,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Active section detection via IntersectionObserver — BP3
+  // Active section detection via IntersectionObserver
   useEffect(() => {
     const sectionIds = links.map(l => l.href.replace('#', ''))
     const observers = []
@@ -75,7 +82,6 @@ export default function Navbar() {
                 }`}
               >
                 {l.label}
-                {/* Active underline indicator — BP3 */}
                 {isActive && (
                   <motion.span
                     layoutId="active-nav"
@@ -86,6 +92,36 @@ export default function Navbar() {
               </a>
             )
           })}
+          
+          {/* LK Dropdown */}
+          <div className="relative ml-2" onMouseEnter={() => setLkOpen(true)} onMouseLeave={() => setLkOpen(false)}>
+            <button className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-full hover:bg-red-700 transition-colors flex items-center gap-1 shadow-sm">
+              Materi LK <span className="text-[10px]">▼</span>
+            </button>
+            <AnimatePresence>
+              {lkOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute right-0 mt-2 w-48 bg-white border border-slate-200 shadow-xl rounded-xl overflow-hidden py-1"
+                >
+                  {lkLinks.map((lk, i) => (
+                    <a
+                      key={i}
+                      href={lk.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-2.5 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors"
+                    >
+                      {lk.label}
+                    </a>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </nav>
 
         {/* Mobile hamburger */}
@@ -99,24 +135,43 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      {menuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white border-t border-slate-200 px-6 py-4 flex flex-col gap-1 shadow-md"
-        >
-          {links.map(l => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setMenuOpen(false)}
-              className="text-slate-600 hover:text-slate-900 font-medium py-2 px-3 rounded-lg hover:bg-slate-50 transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="md:hidden bg-white border-t border-slate-200 overflow-hidden shadow-md"
+          >
+            <div className="px-6 py-4 flex flex-col gap-1">
+              {links.map(l => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="text-slate-600 hover:text-slate-900 font-medium py-2 px-3 rounded-lg hover:bg-slate-50 transition-colors"
+                >
+                  {l.label}
+                </a>
+              ))}
+              <div className="h-px bg-slate-200 my-2 mx-3" />
+              <div className="px-3 py-1 text-xs font-bold text-slate-400 uppercase tracking-widest">Materi LK</div>
+              {lkLinks.map((lk, i) => (
+                <a
+                  key={i}
+                  href={lk.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-600 hover:text-red-700 font-medium py-2 px-3 rounded-lg hover:bg-red-50 transition-colors flex items-center gap-2"
+                >
+                  📄 {lk.label}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   )
 }
+
