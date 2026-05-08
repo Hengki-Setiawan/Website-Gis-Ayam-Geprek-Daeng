@@ -22,9 +22,9 @@ export default function TimSection() {
     <section id="tim" className="py-20 px-4 md:px-6 bg-white">
       <div className="max-w-5xl mx-auto">
         <span className="section-label">TIM PENELITI</span>
-        <h2 className="section-title text-slate-900 mt-2 mb-3">Di Balik Analisis Ini</h2>
+        <h2 className="section-title text-slate-900 mt-2 mb-3">Anggota Kelompok</h2>
         <p className="text-slate-600 text-base mb-10 max-w-2xl">
-          Proyek ini merupakan hasil kerja Kelompok kami, Program Studi Bisnis Digital, Universitas Negeri Makassar, dalam mata kuliah GIS for Business.
+          Proyek ini dikerjakan oleh mahasiswa Program Studi Bisnis Digital, Universitas Negeri Makassar, sebagai bagian dari tugas mata kuliah GIS for Business.
         </p>
 
         {/* Dosen */}

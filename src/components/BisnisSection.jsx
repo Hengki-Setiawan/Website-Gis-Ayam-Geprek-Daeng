@@ -5,14 +5,14 @@ export default function BisnisSection() {
     <section id="bisnis" className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <span className="section-label">BAB 1 · MENGENAL BISNIS KAMI</span>
-          <h2 className="text-4xl font-black text-slate-900 mt-2 mb-6">Dari Dapur ke Data: Kisah Ayam Geprek Daeng</h2>
+          <span className="section-label">BAB 1 · PROFIL BISNIS</span>
+          <h2 className="text-4xl font-black text-slate-900 mt-2 mb-6">Mengenal Ayam Geprek Daeng</h2>
           <div className="text-slate-600 leading-relaxed max-w-3xl space-y-4">
             <p>
-              Ayam Geprek Daeng bukan sekadar warung makan biasa. Kami memadukan resep ayam krispi dengan sambal rempah autentik khas Sulawesi Selatan. Hasilnya adalah cita rasa pedas yang unik dan langsung pas di lidah.
+              Ayam Geprek Daeng adalah usaha kuliner yang menyajikan menu ayam geprek dengan sambal rempah khas Sulawesi Selatan. Usaha ini menyasar segmen konsumen yang luas, mulai dari pelajar hingga pekerja muda, dengan harga yang terjangkau.
             </p>
             <p>
-              Harga yang kami tawarkan sengaja dirancang untuk menjangkau segmen terluas: <strong>pelajar SMA, mahasiswa, hingga pekerja muda</strong> yang menginginkan makanan lezat tanpa menguras kantong. Inilah yang membuat Ayam Geprek Daeng bukan hanya produk kuliner, tapi bagian dari keseharian Gen Z Makassar.
+              Produk utama yang ditawarkan adalah ayam krispi dengan pilihan <strong>lima tingkat kepedasan</strong>, menggunakan bahan baku segar yang diperbarui setiap hari. Saat ini Ayam Geprek Daeng juga tersedia melalui layanan pesan-antar daring seperti GoFood dan GrabFood.
             </p>
           </div>
         </div>
@@ -55,8 +55,8 @@ export default function BisnisSection() {
             className="md:col-span-3 card-dark overflow-hidden flex flex-col md:flex-row border border-slate-200"
           >
             <div className="md:w-1/3 p-8 flex items-center justify-center bg-red-50">
-              <blockquote className="text-2xl font-bold text-red-900 italic text-center leading-snug">
-                "Lokasi yang tepat bukan keberuntungan — itu adalah hasil analisis."
+              <blockquote className="text-xl font-semibold text-red-900 italic text-center leading-snug">
+                "Keputusan lokasi yang tepat memerlukan data, bukan hanya perkiraan."
               </blockquote>
             </div>
             <div className="md:w-2/3 relative min-h-[250px] md:min-h-[auto]">

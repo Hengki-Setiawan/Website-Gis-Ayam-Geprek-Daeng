@@ -6,9 +6,9 @@ export default function LandasanTeoriSection() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <span className="section-label">BAB 3 · LANDASAN TEORI</span>
-          <h2 className="section-title text-slate-900 mt-2">Sistem Informasi Geografis &amp; Analisis Spasial</h2>
+          <h2 className="section-title text-slate-900 mt-2">Sistem Informasi Geografis dalam Analisis Bisnis</h2>
           <p className="text-slate-600 mt-4 max-w-3xl mx-auto">
-            Sistem Informasi Geografis merupakan platform berbasis komputer yang berfungsi mengelola dan menganalisis data bereferensi spasial untuk mengungkap hubungan antara lokasi bisnis dengan variabel eksternal seperti kepadatan penduduk dan aksesibilitas.
+            Sistem Informasi Geografis (GIS) adalah platform berbasis komputer untuk mengelola dan menganalisis data spasial. Dalam konteks bisnis, GIS digunakan untuk memahami hubungan antara lokasi usaha dengan faktor eksternal seperti kepadatan penduduk dan aksesibilitas jalan.
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export default function LandasanTeoriSection() {
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Central Place Theory</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              Teori Lokasi Sentral (Christaller) berfokus pada distribusi layanan ekonomi dalam suatu sistem wilayah berdasarkan jangkauan dan ambang batas. Konsep <strong>range</strong> menjelaskan jarak maksimal yang bersedia ditempuh konsumen, sementara <strong>threshold</strong> menetapkan batas minimum populasi yang dibutuhkan agar sebuah usaha dapat bertahan secara finansial.
+              Teori Lokasi Sentral (Christaller) menjelaskan distribusi layanan ekonomi dalam suatu wilayah berdasarkan konsep <strong>range</strong> (jarak maksimal yang bersedia ditempuh konsumen) dan <strong>threshold</strong> (batas minimum populasi agar suatu usaha dapat bertahan secara finansial). Teori ini menjadi dasar dalam penentuan jangkauan layanan bisnis secara spasial.
             </p>
           </motion.div>
 
@@ -40,9 +40,9 @@ export default function LandasanTeoriSection() {
             <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 text-2xl mb-5">
               🔥
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Analisis Spasial GIS</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Metode Analisis Spasial</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              Metode analisis mencakup <strong>Kernel Density Estimation (KDE)</strong> yang berfungsi memetakan titik-titik intensitas aktivitas usaha tertinggi secara non-parametrik. Serta <strong>Buffer Analysis</strong> untuk mendefinisikan zona jangkauan layanan dan mengidentifikasi potensi kompetisi antar gerai UMKM di sekitarnya.
+              Studi ini menggunakan dua metode utama: <strong>Kernel Density Estimation (KDE)</strong> untuk memetakan intensitas distribusi titik-titik usaha, dan <strong>Buffer Analysis</strong> untuk mendefinisikan zona jangkauan layanan serta mengidentifikasi potensi persaingan antar lokasi usaha di sekitarnya.
             </p>
           </motion.div>
         </div>

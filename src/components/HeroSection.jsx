@@ -35,12 +35,12 @@ export default function HeroSection() {
           </motion.span>
 
           <motion.h1 variants={item} className="hero-title text-slate-900">
-            Ayam Geprek Daeng<br />
-            <span className="text-gradient">Ekspansi Cerdas</span>
+            Analisis Lokasi Cabang<br />
+            <span className="text-gradient">Ayam Geprek Daeng</span>
           </motion.h1>
           
           <motion.p variants={item} className="text-slate-600 text-base md:text-lg leading-relaxed">
-            Menemukan lokasi cabang baru tidak lagi sekadar tebakan. Laporan analitik ini memadukan kelezatan kuliner lokal dengan keakuratan <strong>Sistem Informasi Geografis (GIS)</strong> untuk mengidentifikasi "sweet spot" pertumbuhan bisnis di Kota Makassar.
+            Laporan ini menyajikan hasil analisis spasial menggunakan <strong>Sistem Informasi Geografis (GIS)</strong> untuk menentukan lokasi cabang baru yang potensial bagi usaha Ayam Geprek Daeng di Kota Makassar.
           </motion.p>
           
           <motion.div variants={item} className="flex flex-col sm:flex-row items-center gap-4 mt-2">
@@ -51,7 +51,7 @@ export default function HeroSection() {
               <span className="bounce-arrow">↓</span>
             </a>
             <a href="#bisnis" className="flex items-center gap-2 text-slate-500 hover:text-slate-800 transition-colors text-sm">
-              Pelajari Bisnisnya
+              Tentang Bisnis
             </a>
           </motion.div>
 

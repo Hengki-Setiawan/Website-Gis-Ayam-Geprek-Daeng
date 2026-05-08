@@ -6,10 +6,10 @@ export default function KesimpulanSection() {
     <section id="kesimpulan" className="py-24 px-6 bg-white border-t border-slate-200">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 max-w-3xl">
-          <span className="section-label">BAB 5 · REKOMENDASI</span>
-          <h2 className="text-4xl font-black text-slate-900 mt-2 mb-6">Rekomendasi Titik Lokasi Terbaik</h2>
+          <span className="section-label">BAB 5 · KESIMPULAN &amp; REKOMENDASI</span>
+          <h2 className="text-4xl font-black text-slate-900 mt-2 mb-6">Rekomendasi Lokasi Berdasarkan Analisis GIS</h2>
           <p className="text-slate-600 text-lg leading-relaxed">
-            Dari overlay keempat layer (Aksesibilitas, Kampus, Kepadatan, Kompetitor), kami menemukan titik temu yang ideal. Geser slider di bawah ini untuk melihat irisan kritis antara zona padat penduduk dengan konsentrasi kompetitor.
+            Berdasarkan overlay keempat variabel spasial, diperoleh beberapa wilayah yang memenuhi kriteria kelayakan lokasi. Geser slider di bawah untuk membandingkan peta kepadatan penduduk dengan sebaran kompetitor secara langsung.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export default function KesimpulanSection() {
 
           <div className="space-y-8">
             <div className="card-dark p-8 bg-slate-50 border border-slate-200">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Formula Lokasi Ideal</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Kriteria Lokasi yang Dipenuhi</h3>
               <ul className="space-y-3 text-slate-600">
                 <li className="flex items-center gap-3"><span>✅</span> Berada di akses jalan utama (biru/hijau)</li>
                 <li className="flex items-center gap-3"><span>✅</span> Dekat area kampus (radius 500m)</li>
@@ -46,7 +46,7 @@ export default function KesimpulanSection() {
             </div>
 
             <p className="text-slate-600 leading-relaxed text-lg">
-              Kesimpulannya, strategi terbaik adalah membuka outlet baru di sekitar perimeter luar dari area kompetitor utama. Berdasarkan kriteria ini, kami merekomendasikan dua kawasan:
+              Berdasarkan evaluasi keempat kriteria, terdapat dua kawasan yang paling memenuhi syarat dan direkomendasikan sebagai lokasi cabang baru:
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -99,7 +99,7 @@ export default function KesimpulanSection() {
         >
           <img src="/Gambar produk.webp" alt="Produk Ayam Geprek" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
-            <p className="text-white font-bold text-2xl italic">"Siap melayani kawasan baru dengan rasa yang sama."</p>
+            <p className="text-white font-semibold text-lg">Analisis GIS · Program Studi Bisnis Digital · UNM 2026</p>
           </div>
         </motion.div>
       </div>

@@ -48,16 +48,16 @@ export default function MengapaGISSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
             <span className="section-label">BAB 2 · PROBLEM &amp; SOLUSI</span>
-            <h2 className="section-title text-slate-900 mt-2 mb-5">Mengapa Lokasi Menentukan Keberhasilan Bisnis?</h2>
+            <h2 className="section-title text-slate-900 mt-2 mb-5">Mengapa Lokasi Berpengaruh pada Keberhasilan Usaha?</h2>
             <div className="space-y-4 text-slate-600 leading-relaxed text-base md:text-lg">
               <p>
-                Banyak usaha kuliner yang tutup bukan karena produknya buruk, melainkan karena <strong>salah memilih lokasi</strong>. Lokasi yang terlihat ramai belum tentu menguntungkan apabila kompetitor di sana sudah sangat padat atau segmen pasarnya tidak sesuai.
+                Penentuan lokasi usaha merupakan salah satu faktor strategis yang berdampak langsung pada volume penjualan. Lokasi yang terlihat ramai belum tentu optimal apabila tingkat persaingan di area tersebut sudah tinggi atau segmen pasarnya tidak sesuai sasaran.
               </p>
               <p>
-                <strong>GIS (Geographic Information System)</strong> mengubah cara pandang ini. Dengan GIS, kita dapat menganalisis kota secara spasial — mengukur jarak dengan presisi, memetakan kepadatan wilayah, dan menemukan area berpotensi yang sering terlewatkan.
+                <strong>GIS (Geographic Information System)</strong> memungkinkan analisis data spasial secara lebih sistematis — mulai dari mengukur jarak, memetakan kepadatan wilayah, hingga mengidentifikasi area yang belum terlayani oleh kompetitor.
               </p>
               <p>
-                Untuk Ayam Geprek Daeng, kami menggunakan <strong>4 lapisan data spasial</strong> utama. Mengapa empat variabel ini? Akses jalan menjamin kelancaran layanan pesan-antar. Fasilitas pendidikan dan kepadatan penduduk merepresentasikan target pasar kami. Sementara pemetaan titik kompetitor bertujuan menghindari area yang sudah jenuh.
+                Dalam studi ini, kami menggunakan <strong>empat variabel spasial</strong>: aksesibilitas jalan, fasilitas pendidikan, kepadatan penduduk, dan sebaran kompetitor. Pemilihan keempat variabel ini didasarkan pada karakteristik segmen pasar utama Ayam Geprek Daeng.
               </p>
             </div>
 

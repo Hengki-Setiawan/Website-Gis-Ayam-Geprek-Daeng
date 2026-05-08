@@ -58,9 +58,9 @@ export default function AnalisisPetaSection() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-10 md:mb-12">
           <span className="section-label">BAB 4 · ANALISIS SPASIAL</span>
-          <h2 className="section-title text-slate-900 mt-2 mb-3">Empat Lapisan Data untuk Membaca Kota</h2>
+          <h2 className="section-title text-slate-900 mt-2 mb-3">Hasil Analisis Empat Variabel Spasial</h2>
           <p className="text-slate-600 max-w-2xl text-base md:text-lg">
-            Setiap peta merepresentasikan satu dimensi spasial Kota Makassar yang berpengaruh terhadap keberhasilan outlet kuliner. Pilih tab untuk membaca analisis lengkapnya.
+            Setiap peta menggambarkan satu variabel spasial Kota Makassar yang relevan dalam penentuan lokasi usaha kuliner. Pilih tab untuk melihat analisis tiap variabel.
           </p>
         </div>
 
