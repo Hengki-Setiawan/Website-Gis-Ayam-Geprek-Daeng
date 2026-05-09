@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import { ChapterDivider } from './components/ChapterDivider'
 import AIAssistant from './components/AIAssistant'
+import PetaInteraktifSection from './components/PetaInteraktifSection'
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
         <LandasanTeoriSection />
         <ChapterDivider label="BAB 4" />
         <AnalisisPetaSection />
+        <PetaInteraktifSection />
         <ChapterDivider label="BAB 5" />
         <KesimpulanSection />
         <ChapterDivider label="BAB 6" />
